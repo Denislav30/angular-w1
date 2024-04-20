@@ -1,0 +1,28 @@
+<div>
+    <h2 (click)="toggleVisibility('name')">Лична информация</h2>
+    <div *ngIf="visibleSections.name">
+      Казвам се {{name}} и съм на {{age}} години.
+      Обичам в свободното си време да тренирам и да се разхождам.
+    </div>
+  </div>
+  
+  <div>
+    <h2 (click)="toggleVisibility('auto')">Автомобили</h2>
+    <div *ngIf="visibleSections.auto">
+      Много обичам автомобилите и това е линка на любимия ми content-creator: <a href="{{link}}" target="_blank">{{link}}</a>
+    </div>
+  </div>
+  
+  <div>
+    <h2 (click)="toggleVisibility('channel')">Моят канал</h2>
+    <div *ngIf="visibleSections.channel">
+       В канала ми ще намерите клипове с кодиране, автомобили и влогове от фитнеса.
+    </div>
+  </div>
+  
+  <div>
+    <h2 (click)="toggleVisibility('wealth')">Остойностяване</h2>
+    <div *ngIf="visibleSections.wealth">
+      Остойностяване: {{moneyNumber}} долара.
+    </div>
+  </div>
